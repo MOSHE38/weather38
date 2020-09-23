@@ -1,0 +1,79 @@
+{
+  "short_name": "Weather App",
+  "name": "Weather Forecast",
+  "lang": "en",
+  "start_url": ".",
+  "background_color": "#111111",
+  "theme_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon/android-icon-192x159-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "192x159"
+    },
+    {
+      "src": "icon/apple-icon-180x149-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "180x149"
+    },
+    {
+      "src": "icon/apple-icon-152x126-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "152x126"
+    },
+    {
+      "src": "icon/apple-icon-144x119-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "144x119"
+    },
+    {
+      "src": "icon/apple-icon-120x99-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "120x99"
+    },
+    {
+      "src": "icon/apple-icon-114x94-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "114x94"
+    },
+    {
+      "src": "icon/favicon-96x79-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "96x79"
+    },
+    {
+      "src": "icon/apple-icon-76x63-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "76x63"
+    },
+    {
+      "src": "icon/apple-icon-72x60-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "72x60"
+    },
+    {
+      "src": "icon/apple-icon-60x50-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "60x50"
+    },
+    {
+      "src": "icon/apple-icon-57x47-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "57x47"
+    },
+    {
+      "src": "icon/favicon-32x26-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "32x26"
+    },
+    {
+      "src": "icon/favicon-16x13-dunplab-manifest-17711.png",
+      "type": "image/png",
+      "sizes": "16x13"
+    }
+  ],
+  "prefer_related_applications": false
+}
