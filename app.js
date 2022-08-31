@@ -16,7 +16,7 @@ searchBtn.addEventListener("click", (e) => {
 //     console.log(searchInputBox.value);
     getWeatherReport(searchInputBox.value);
     document.querySelector(".weather-body").style.display = "block";
-      errorMsg.style.display = "none";
+    errorMsg.style.display = "none";
 
     // Function to trigger local storage 'DB' creation.
     createLocalStorageDB();
@@ -36,6 +36,21 @@ searchBtn.addEventListener("click", (e) => {
     }
   }
 });
+
+const readLocalStorageDB = () => {
+  const weather_DB = window.localStorage.getItem(
+    "searchInputBox",
+    searchInputBox
+  );
+  const weather_DB_obj = JSON.parse(weather_DB);
+
+  if (!weather_DB_obj) {
+    return []; // return empty array (to signify no data)
+  }
+
+  // return weather data;
+  return weather_DB_obj.data;
+};
 
 
 const createLocalStorageDB = (localStorageName, defaultData) => {
