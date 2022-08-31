@@ -11,31 +11,31 @@ const errorMsg = document.querySelector(".error-msg");
 
 // Event listener Function on keypress
 searchBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (searchInputBox.value !== "") {
+  e.preventDefault();
+  if (searchInputBox.value !== "") {
+//     console.log(searchInputBox.value);
+    getWeatherReport(searchInputBox.value);
+    document.querySelector(".weather-body").style.display = "block";
 
-        // Get user input. Trim to remove all trailing spaces making
-        // sure 'valid' data was typed. 
-        const searchValue = searchInputBox.value.toString().trim();
-        
-        if (searchValue.length === 0) {
-            errorMsg.style.display = "block";
-        } else {
-            // console.log(searchInputBox.value);
-            getWeatherReport(searchValue);
-            document.querySelector(".weather-body").style.display = "block";
-        }
-    }
+    // Function to trigger local storage 'DB' creation.
+    createLocalStorageDB();
 
-    if ("serviceWorker" in navigator) {
-        try {
-            navigator.serviceWorker.register("sw.js");
-            console.log("SW registered");
-        } catch (error) {
-            console.log("SW reg failed");
-        }
+    // Function to read data from localStorage 'DB'.
+    readLocalStorageDB();
+  } else {
+    errorMsg.style.display = "block";
+  }
+
+  if ("serviceWorker" in navigator) {
+    try {
+      navigator.serviceWorker.register("sw.js");
+//       console.log("SW registered");
+    } catch (error) {
+//       console.log("SW reg failed");
     }
+  }
 });
+
 
 const createLocalStorageDB = (localStorageName, defaultData) => {
 
