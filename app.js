@@ -16,6 +16,7 @@ searchBtn.addEventListener("click", (e) => {
 //     console.log(searchInputBox.value);
     getWeatherReport(searchInputBox.value);
     document.querySelector(".weather-body").style.display = "block";
+      errorMsg.style.display = "none";
 
     // Function to trigger local storage 'DB' creation.
     createLocalStorageDB();
