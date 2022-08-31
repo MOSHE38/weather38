@@ -6,17 +6,20 @@ const weatherApi = {
 const __LOCAL_STORAGE_NAME = "weather_DB";
 
 const searchInputBox = document.getElementById("input-box");
+const searchBtn = document.querySelector(".button");
+const errorMsg = document.querySelector(".error-msg");
 
 // Event listener Function on keypress
-searchInputBox.addEventListener("keypress", (e) => {
-    if (e.keyCode == 13 && searchInputBox.value !== "") {
+searchBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (searchInputBox.value !== "") {
 
         // Get user input. Trim to remove all trailing spaces making
         // sure 'valid' data was typed. 
         const searchValue = searchInputBox.value.toString().trim();
         
         if (searchValue.length === 0) {
-            window.alert("Please type city name");
+            errorMsg.style.display = "block";
         } else {
             // console.log(searchInputBox.value);
             getWeatherReport(searchValue);
