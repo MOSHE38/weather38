@@ -93,7 +93,7 @@ function getWeatherReport(city) {
 }
 // Show weather Report
 function showWeatherReport(weather) {
-    console.log(weather);
+//     console.log(weather);
 
     let city = document.getElementById("city");
     city.innerHTML = `${weather.name}, ${weather.sys.country}`;
