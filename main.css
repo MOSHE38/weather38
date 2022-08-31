@@ -45,6 +45,30 @@ body {
   background-color: rgba(255, 255, 255);
 }
 
+.app-main .error-msg {
+  color: red;
+  display: none;
+}
+
+button {
+  width: 50%;
+  height: 40px;
+  margin-top: 20px;
+  border: 2px solid crimson;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  color: crimson;
+  background: none;
+}
+
 .weather-body {
   display: none;
   color: black;
